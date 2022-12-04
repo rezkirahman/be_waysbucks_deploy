@@ -36,9 +36,9 @@ func main() {
 	var AllowedMethods = handlers.AllowedMethods([]string{"GET", "POST", "PUT", "HEAD", "OPTIONS", "PATCH", "DELETE"})
 	var AllowedOrigins = handlers.AllowedOrigins([]string{"*"})
 
-	var port = "5000"
-	fmt.Println("server running localhost:" + port)
+	var port = "6648"
+	fmt.Println("server running :" + port)
 
 	// Embed the setup allowed in 2 parameter on this below code ...
-	http.ListenAndServe(""+port, handlers.CORS(AllowedHeaders, AllowedMethods, AllowedOrigins)(r))
+	http.ListenAndServe(":"+port, handlers.CORS(AllowedHeaders, AllowedMethods, AllowedOrigins)(r))
 }
