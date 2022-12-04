@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"fmt"
-	"os"
+	//"os"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -10,11 +10,11 @@ import (
 
 var DB *gorm.DB
 
-var DB_HOST = os.Getenv("DB_HOST")
-var DB_USER = os.Getenv("DB_USER")
-var DB_PASSWORD = os.Getenv("DB_PASSWORD")
-var DB_NAME = os.Getenv("DB_NAME")
-var DB_PORT = os.Getenv("DB_PORT")
+// var DB_HOST = os.Getenv("DB_HOST")
+// var DB_USER = os.Getenv("DB_USER")
+// var DB_PASSWORD = os.Getenv("DB_PASSWORD")
+// var DB_NAME = os.Getenv("DB_NAME")
+// var DB_PORT = os.Getenv("DB_PORT")
 
 // Connection Database
 func DatabaseInit() {
