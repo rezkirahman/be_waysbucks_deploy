@@ -6,7 +6,7 @@ import (
 	"waysbucks/database"
 	"waysbucks/pkg/mysql"
 	"waysbucks/routes"
-
+"os"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
@@ -36,7 +36,7 @@ func main() {
 	var AllowedMethods = handlers.AllowedMethods([]string{"GET", "POST", "PUT", "HEAD", "OPTIONS", "PATCH", "DELETE"})
 	var AllowedOrigins = handlers.AllowedOrigins([]string{"*"})
 
-	var port = "6648"
+	var port = os.Getenv("DB_PORT")
 	fmt.Println("server running :" + port)
 
 	// Embed the setup allowed in 2 parameter on this below code ...
